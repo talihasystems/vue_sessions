@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
-    <h1 :class="isActive ? 'active': ''" >{{ msg }}</h1>
+    <!-- <h1 :class="isActive ? 'active': ''" >{{ msg }}</h1> -->
+    <h1 :class="{ active: isActive }" >{{ msg }}</h1>
+    
     <button @click="handleAction">Click</button>
     <input v-model="message"/>
     <ul>
