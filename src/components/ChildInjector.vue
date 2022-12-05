@@ -8,9 +8,13 @@
 </template>
 
 <script>
+
+import {testMixin} from '../mixins/testMixin'
+
 export default {
   name: 'ChildInjector',
   inject: ['childMessage'],
+  mixins: [testMixin],
   data(){
     return {
       grade: 10,
