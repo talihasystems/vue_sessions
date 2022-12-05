@@ -8,14 +8,22 @@
     </ul>
     {{message}}
   </div>
+  <ChildInjector/>
 </template>
 
 <script>
+
+import ChildInjector from './ChildInjector.vue'
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
   },
+  components: {
+    ChildInjector
+  },
+  
   data(){
     return{
       isActive: false,
