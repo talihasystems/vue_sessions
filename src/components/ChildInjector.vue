@@ -4,6 +4,7 @@
     {{childMessage}}
 
     <p>Has register in course : {{ registerCourse }}</p>
+    <button @click="sendMessageToParent">Send Data to parent</button>
   </div>
 </template>
 
@@ -40,8 +41,12 @@ export default {
     registerCourse() {
       return this.student.courses.includes('SQA')  ? 'Yes' : 'No'
     }
+  },
+  methods: {
+      sendMessageToParent() {
+        this.$emit('messageFromChild', 'hello parent');
+      }
   }
-  
 }
 </script>
 

@@ -10,7 +10,7 @@
     </ul>
     {{message}}
   </div>
-  <ChildInjector/>
+  <ChildInjector @messageFromChild="childMessageData"/>
 </template>
 
 <script>
@@ -36,6 +36,9 @@ export default {
   methods:{
     handleAction(){
       this.isActive = !this.isActive
+    },
+    childMessageData(arg1) {
+      console.log('event from child, child data', arg1)
     }
   }
 }
